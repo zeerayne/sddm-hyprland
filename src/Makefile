@@ -1,0 +1,1 @@
+/home/khing/The HyDE Project/sddm/Makefile
