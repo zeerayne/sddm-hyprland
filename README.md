@@ -61,6 +61,7 @@ You can also solve some scaling issue specific to your monitor.
 # TODO
 - [X] Separate sddm-hyprland and hyde configuration 
 - [ ] Package manager support (AUR)
+- [ ] nix support
 
 # Support
 
