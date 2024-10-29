@@ -1,9 +1,12 @@
 # sddm-hyprland
 
-- Sddm wayland using Hyprland as compositor
+- SDDM wayland on Hyprland Compositor 
 - HyDE's sddm wayland configuration
 
-# Installation
+# Installation 
+
+Base installation guide for sddm-hyprland.
+This should work on any distro that has sddm and hyprland installed.
 
 ### Manual (makefile)
     
@@ -20,6 +23,7 @@
     yay -S sddm-hyprland
     ``` -->
 
+> Not available yet
 
 # Configuration
 
@@ -55,7 +59,7 @@ You can override this by disabling the monitor.
 You can also solve some scaling issue specific to your monitor.
 
 # TODO
-- [X] Separate sddm-hyprland and hyde configuration
+- [X] Separate sddm-hyprland and hyde configuration 
 - [ ] Package manager support (AUR)
 
 # Support
@@ -64,6 +68,8 @@ You can also solve some scaling issue specific to your monitor.
 - Bug fixes are welcome
 - We could talk about feature requests
 
+
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A3TECUZ) 
 
 
 
