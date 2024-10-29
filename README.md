@@ -10,11 +10,11 @@ This should work on any distro that has sddm and hyprland installed.
 
 ### Manual (makefile)
     
-    ```bash
+```bash
     git clone https://github.com/HyDE-Project/sddm-hyprland
     cd sddm-hyprland
     sudo make install
-    ```
+```
 
 ### Archlinux (AUR)
 
