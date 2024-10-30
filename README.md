@@ -1,15 +1,26 @@
 # sddm-hyprland
 
-- SDDM wayland on Hyprland Compositor 
+- SDDM wayland on Hyprland Compositor
 - HyDE's sddm wayland configuration
 
-# Installation 
+# Dependencies
+
+- [Hyprland](https://github.com/hyprwm/Hyprland/)
+- [SDDM](https://wiki.archlinux.org/title/SDDM)
+
+You also need to have [layer-shell-qt5](https://archlinux.org/packages/extra/x86_64/layer-shell-qt5/) installed.
+
+- https://wiki.archlinux.org/title/SDDM#Wayland
+
+Soon this might change but for now this will fix the black screen issue.
+
+# Installation
 
 Base installation guide for sddm-hyprland.
 This should work on any distro that has sddm and hyprland installed.
 
 ### Manual (makefile)
-    
+
 ```bash
     git clone https://github.com/HyDE-Project/sddm-hyprland
     cd sddm-hyprland
@@ -27,18 +38,17 @@ This should work on any distro that has sddm and hyprland installed.
 
 # Configuration
 
-sddm-hyprland exposes these optional files and directories for configuration: 
+sddm-hyprland exposes these optional files and directories for configuration:
 
 > It is on the user to create these file/s and directory and be organized.
 
-``` bash
+```bash
 /var/tmp/hypr/hyprland.conf 
 /etc/sddm.conf.d/hypr/monitors.conf
 /etc/sddm.conf.d/hypr/monitors/*.conf
 ```
 
-> I would recommend to use `/var/tmp/hypr/hyprland.conf` to avoid permission issues. 
-
+> I would recommend to use `/var/tmp/hypr/hyprland.conf` to avoid permission issues.
 
 ### Keyboard layouts
 
@@ -54,23 +64,20 @@ input:kb_layout = "us"
 
  https://wiki.hyprland.org/Configuring/Monitors/
 
-By default, this configuration will use all available monitors. 
+By default, this configuration will use all available monitors.
 You can override this by disabling the monitor.
 You can also solve some scaling issue specific to your monitor.
 
 # TODO
-- [X] Separate sddm-hyprland and hyde configuration 
+
+- [X] Separate sddm-hyprland and hyde configuration
 - [ ] Package manager support (AUR)
 - [ ] nix support
 
 # Support
 
-- Reporting relevant issues are appreciated 
+- Reporting relevant issues are appreciated
 - Bug fixes are welcome
 - We could talk about feature requests
 
-
-  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A3TECUZ) 
-
-
-
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A3TECUZ)
