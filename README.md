@@ -68,6 +68,41 @@ By default, this configuration will use all available monitors.
 You can override this by disabling the monitor.
 You can also solve some scaling issue specific to your monitor.
 
+### Cursor
+ 
+
+##### Without HyDE
+ Due to some sort of [bug](https://github.com/sddm/sddm/issues/1996), the cursors cannot be set naturally by the compositor.
+ Therefore we have to set it manually.
+ sddm-hyprland added the [sddm-user.conf](src/sddm-user.conf)  to set the cursor. 
+    To avoid issues, we encorage you to add it manually.
+
+Inside `/etc/sddm.conf.d/sddm-user.conf` add the following:
+
+```sddm
+[Theme]
+CursorTheme=Bibata-Modern-Ice
+CursorSize=24
+```
+
+##### With HyDE
+
+When you have HyDE installed, you can set the cursor theme and size in the `hyde.conf` file.
+
+example:
+
+```bash
+SDDM_CURSOR_THEME="Bibata-Modern-Ice"
+SDDM_CURSOR_SIZE=24
+```
+
+or you can also dynamically set it together with the `Hyde sddm set/select` commands.
+
+```bash
+export SDDM_CURSOR_THEME=Bibata-Modern-Ember
+export SDDM_CURSOR_SIZE=30
+ Hyde sddm select "Candy"
+```
 # TODO
 
 - [X] Separate sddm-hyprland and hyde configuration
