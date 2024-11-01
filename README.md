@@ -72,7 +72,7 @@ You can also solve some scaling issue specific to your monitor.
  
 
 ##### Without HyDE
- Due to some sort of [bug](https://github.com/sddm/sddm/issues/1996), the cursors cannot be set naturally by the compositor.
+ Due to some sort of [bug](https://forum.garudalinux.org/t/sddm-does-not-use-the-set-cursor/37680/6), the cursors cannot be set naturally by the compositor.
  Therefore we have to set it manually.
  sddm-hyprland added the [sddm-user.conf](src/sddm-user.conf)  to set the cursor. 
     To avoid issues, we encorage you to add it manually.
