@@ -1,6 +1,6 @@
 # sddm-hyprland
 
-- SDDM wayland on Hyprland Compositor
+- SDDM layer-shell on Hyprland Compositor
 - HyDE's sddm wayland configuration
 
 # Dependencies
@@ -17,7 +17,7 @@ Soon this might change but for now this will fix the black screen issue.
 # Installation
 
 Base installation guide for sddm-hyprland.
-This should work on any distro that has sddm and hyprland installed.
+This should work on any distro that provides sddm and hyprland.
 
 ### Manual (makefile)
 
@@ -29,7 +29,7 @@ This should work on any distro that has sddm and hyprland installed.
 
 ### Archlinux (AUR)
 
-<!-- 
+<!--
     ```bash
     yay -S sddm-hyprland
     ``` -->
@@ -38,44 +38,44 @@ This should work on any distro that has sddm and hyprland installed.
 
 # Configuration
 
-sddm-hyprland exposes these optional files and directories for configuration:
+sddm-hyprland tries to source these configuration files:
 
 > It is on the user to create these file/s and directory and be organized.
 
 ```bash
-/var/tmp/hypr/hyprland.conf 
-/etc/sddm.conf.d/hypr/monitors.conf
+/var/tmp/hypr/hyprland.conf
+/etc/sddm.conf.d/hypr/
 /etc/sddm.conf.d/hypr/monitors/*.conf
 ```
-
-> I would recommend to use `/var/tmp/hypr/hyprland.conf` to avoid permission issues.
 
 ### Keyboard layouts
 
 [Configuring keyboard layouts in hyprland ](https://wiki.hyprland.org/Configuring/Keyboard/)
 
 ```hyprlang
-input:kb_layout = "us"
-
+input{
+    kb_layout = us,ed,de
+}
 ```
-> I never tested this as I don't have a keyboard with a different layout.
+
+To change a layout use, press **SUPER + K**, this will trigger the keyboard layout switcher script.
 
 ### Monitors
 
- https://wiki.hyprland.org/Configuring/Monitors/
+https://wiki.hyprland.org/Configuring/Monitors/
 
 By default, this configuration will use all available monitors.
 You can override this by disabling the monitor.
 You can also solve some scaling issue specific to your monitor.
 
 ### Cursor
- 
 
 ##### Without HyDE
- Due to some sort of [bug](https://forum.garudalinux.org/t/sddm-does-not-use-the-set-cursor/37680/6), the cursors cannot be set naturally by the compositor.
- Therefore we have to set it manually.
- sddm-hyprland added the [sddm-user.conf](src/sddm-user.conf)  to set the cursor. 
-    To avoid issues, we encorage you to add it manually.
+
+Due to some sort of [bug](https://forum.garudalinux.org/t/sddm-does-not-use-the-set-cursor/37680/6), the cursors cannot be set naturally by the compositor.
+Therefore we have to set it manually.
+sddm-hyprland added the [sddm-user.conf](src/sddm-user.conf) to set the cursor.
+To avoid issues, we encorage you to add it manually.
 
 Inside `/etc/sddm.conf.d/sddm-user.conf` add the following:
 
@@ -84,6 +84,11 @@ Inside `/etc/sddm.conf.d/sddm-user.conf` add the following:
 CursorTheme=Bibata-Modern-Ice
 CursorSize=24
 ```
+
+> [!Note]
+> Some changes happenned and I don't this is is working properly.
+
+<!--
 
 ##### With HyDE
 
@@ -103,9 +108,11 @@ export SDDM_CURSOR_THEME=Bibata-Modern-Ember
 export SDDM_CURSOR_SIZE=30
  Hyde sddm select "Candy"
 ```
+-->
+
 # TODO
 
-- [X] Separate sddm-hyprland and hyde configuration
+- [x] Separate sddm-hyprland and hyde configuration
 - [ ] Package manager support (AUR)
 - [ ] nix support
 
