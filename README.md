@@ -43,10 +43,12 @@ sddm-hyprland tries to source these configuration files:
 > It is on the user to create these file/s and directory and be organized.
 
 ```bash
-/var/tmp/hypr/hyprland.conf
-/etc/sddm.conf.d/hypr/
-/etc/sddm.conf.d/hypr/monitors/*.conf
+${prefix}/share/hyde/sddm/hyprprefs.conf
+/etc/sddm.conf.d/hypr/sddm-hyprland.conf
 ```
+
+> [!Note]
+> Default ${prefix} is `/usr`
 
 ### Keyboard layouts
 
@@ -70,7 +72,7 @@ You can also solve some scaling issue specific to your monitor.
 
 ### Cursor
 
-##### Without HyDE
+<!-- ##### Without HyDE -->
 
 Due to some sort of [bug](https://forum.garudalinux.org/t/sddm-does-not-use-the-set-cursor/37680/6), the cursors cannot be set naturally by the compositor.
 Therefore we have to set it manually.
